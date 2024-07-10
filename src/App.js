@@ -8,7 +8,7 @@ import {
   TextField,
 } from "@mui/material";
 import { useState } from "react";
-import DeleteIcon from '@mui/icons-material/Delete';
+import DeleteIcon from "@mui/icons-material/Delete";
 
 function App() {
   const [todos, setTodos] = useState(() => {
@@ -37,6 +37,7 @@ function App() {
 
   return (
     <>
+      <h1 style={{textAlign: 'center'}}>Todo List</h1>
       <Box
         style={{ display: "flex", justifyContent: "center", marginTop: "30px" }}
       >
@@ -47,7 +48,9 @@ function App() {
           label="Outlined"
           variant="outlined"
         />
-        <Button onClick={addTodo} variant="contained">Submit</Button>
+        <Button onClick={addTodo} variant="contained">
+          Submit
+        </Button>
       </Box>
       <Box
         style={{
@@ -66,9 +69,7 @@ function App() {
                 </IconButton>
               }
             >
-              <ListItemText
-                primary={todo.text}
-              />
+              <ListItemText primary={todo.text} />
             </ListItem>
           ))}
         </List>
